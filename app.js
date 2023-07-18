@@ -4,13 +4,11 @@ const express = require('express');
 // Initialize express
 const app = express();
 
-// route for the index page
-app.get('/', (req, res)=>{
-    response.send('<h1> Welcome to my app</h1>')
- });
+// Set a static folder
+app.use(express.static('public'));
 
 // Define the port number
-const PORT = 8000;
+const PORT = 5000;
 
 
 app.listen(PORT, function(){
